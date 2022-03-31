@@ -1,0 +1,119 @@
+.qe-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 0;
+    height: min-content;
+    .qe-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        .qe-title{
+            width: 100%;
+            height: 100%;
+            font-size: $fontSubtitleSize;
+            color: $whiteColor;
+        }
+        .qe-description{
+            width: 100%;
+            height: 100%;
+            font-size: $fontDescriptionSize;
+            color: $blackColor;
+        }
+        .qe-image{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .qe-body{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        .qe-item{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+            gap: 10px;
+            .qe-item-label{
+                font-size: $fontDescriptionSize;
+                color: $blackColor;
+            }
+            .qe-item-input{
+                font-size: $fontDescriptionSize;
+                color: $blackColor;
+                width: 100px;
+                padding: 5px;
+                border-radius: 5px;
+                &:focus{
+                    outline: none;
+                }
+            }
+            .qe-item-btn{
+                border: none;
+                font-size: $fontDescriptionSize;
+                color: $blackColor;
+                width: 150px;
+                padding: 5px;
+                border-radius: 5px;
+                &:focus{
+                    outline: none;
+                }
+                &:hover{
+                    background-color: $secondaryColor;  
+                    color: $whiteColor  ;
+                    cursor: pointer;
+                }
+            }
+        }
+        .qe-inputs{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            gap: 20px;
+        }
+        .qe-outputs{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            gap: 20px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+    .qe-container{
+        flex-direction: column;
+        padding: 20px 0;
+        .qe-header{
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .qe-body{
+            align-items: center;
+            justify-content: center;
+            .qe-item{
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}

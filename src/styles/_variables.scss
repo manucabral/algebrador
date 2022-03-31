@@ -1,0 +1,21 @@
+$primaryColor: #7C77B9;
+$secondaryColor: #420039;
+$blackColor: #07090F;
+$whiteColor: #FFFBFE;
+$grayColor: #535557;
+
+$maxSectionWidth: 1200px;
+
+$fontTitleSize: 48px;
+$fontSubtitleSize: 32px;
+$fontDescriptionSize: 24px;
+
+@font-face {
+    font-family: 'SansArabic';
+    src: url('../fonts/IBMPlexSansArabic-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'SansArabic-semibold';
+    src: url('../fonts/IBMPlexSansArabic-SemiBold.ttf');
+}

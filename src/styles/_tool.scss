@@ -1,0 +1,27 @@
+.tool-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: min-content;
+    .tool-container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        max-width: $maxSectionWidth;
+        width: 100%;
+        height: 100%;
+        .tool-item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background-color: $primaryColor;
+        }
+    }
+}
