@@ -13,10 +13,16 @@ export const useQuadraticEquation = () => {
     else setValue(value);
   };
 
-  const applyFormula = (a: number, b: number, c: number) => {
+  const applyFormula = (
+    a: number,
+    b: number,
+    c: number,
+    setErrorMessage: Dispatch<SetStateAction<string>>
+  ) => {
     if (a === 0 && b === 0 && c === 0) {
       setX1(0);
       setX2(0);
+      setErrorMessage("No hay ningun valor introducido");
     }
     if (a === 0 && b !== 0) {
       setX1(-c / b);
@@ -27,6 +33,7 @@ export const useQuadraticEquation = () => {
       if (discriminant < 0) {
         setX1(0);
         setX2(0);
+        setErrorMessage("No hay soluciones reales");
       } else if (discriminant === 0) {
         setX1(-b / (2 * a));
         setX2(-b / (2 * a));

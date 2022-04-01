@@ -6,6 +6,7 @@ export default function QuadraticEquation() {
   const [a, setA] = useState(0);
   const [b, setB] = useState(0);
   const [c, setC] = useState(0);
+  const [errorMessage, setErrorMessage] = useState("");
   const { x1, x2, handleValue, applyFormula } = useQuadraticEquation();
   return (
     <div className="qe-container">
@@ -51,7 +52,7 @@ export default function QuadraticEquation() {
           <div className="qe-item">
             <button
               className="qe-item-btn"
-              onClick={() => applyFormula(a, b, c)}
+              onClick={() => applyFormula(a, b, c, setErrorMessage)}
             >
               Calcular
             </button>
@@ -75,6 +76,13 @@ export default function QuadraticEquation() {
               value={x2}
               name="r2"
             />
+          </div>
+          <div className="qe-item">
+            {errorMessage ? (
+              <p className="qe-item-error">{errorMessage}</p>
+            ) : (
+              <p className="qe-item-error"></p>
+            )}
           </div>
         </div>
       </div>
