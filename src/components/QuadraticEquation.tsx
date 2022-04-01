@@ -19,39 +19,39 @@ export default function QuadraticEquation() {
       </div>
       <div className="qe-body">
         <div className="qe-inputs">
-          <div className="qe-item">
-            <label className="qe-item-label">a</label>
+          <div className="item">
+            <label className="item-label">a</label>
             <input
-              className="qe-item-input"
+              className="item-input"
               type="number"
               name="a"
               defaultValue={a}
               onChange={(e) => handleValue(e, setA)}
             />
           </div>
-          <div className="qe-item">
-            <label className="qe-item-label">b</label>
+          <div className="item">
+            <label className="item-label">b</label>
             <input
-              className="qe-item-input"
+              className="item-input"
               type="number"
               name="b"
               defaultValue={b}
               onChange={(e) => handleValue(e, setB)}
             />
           </div>
-          <div className="qe-item">
-            <label className="qe-item-label">c</label>
+          <div className="item">
+            <label className="item-label">c</label>
             <input
-              className="qe-item-input"
+              className="item-input"
               type="number"
               name="c"
               defaultValue={c}
               onChange={(e) => handleValue(e, setC)}
             />
           </div>
-          <div className="qe-item">
+          <div className="item">
             <button
-              className="qe-item-btn"
+              className="btn"
               onClick={() => applyFormula(a, b, c, setErrorMessage)}
             >
               Calcular
@@ -59,30 +59,16 @@ export default function QuadraticEquation() {
           </div>
         </div>
         <div className="qe-outputs">
-          <div className="qe-item">
-            <label className="qe-item-label">X1</label>
-            <input
-              className="qe-item-input"
-              type="number"
-              name="r1"
-              value={x1}
-            />
+          <div className="item">
+            <label className="item-label">X1</label>
+            <input className="item-input" type="number" readOnly name="r1" value={x1} />
           </div>
-          <div className="qe-item">
-            <label className="qe-item-label">X2</label>
-            <input
-              className="qe-item-input"
-              type="number"
-              value={x2}
-              name="r2"
-            />
+          <div className="item">
+            <label className="item-label">X2</label>
+            <input className="item-input" type="number" readOnly value={x2} name="r2" />
           </div>
-          <div className="qe-item">
-            {errorMessage ? (
-              <p className="qe-item-error">{errorMessage}</p>
-            ) : (
-              <p className="qe-item-error"></p>
-            )}
+          <div className="item">
+            {errorMessage && <p className="item-error">{errorMessage}</p>}
           </div>
         </div>
       </div>

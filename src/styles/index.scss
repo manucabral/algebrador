@@ -30,12 +30,57 @@ html {
         height: 100%;
         background: $blackColor;
       }
+      .btn{
+        border: none;
+        font-size: $fontDescriptionSize;
+        color: $blackColor;
+        width: 150px;
+        padding: 5px;
+        border-radius: 5px;
+        &:focus{
+          outline: none;
+        }
+        &:hover{
+          background-color: $secondaryColor;  
+          color: $whiteColor  ;
+          cursor: pointer;
+        }
+      }
+      .item{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        gap: 10px;
+        .item-error{
+            text-align: center;
+            color: rgb(143, 0, 0);
+            font-size: $fontDescriptionSize;
+        }
+        .item-label{
+            font-size: $fontDescriptionSize;
+            color: $blackColor;
+        }
+        .item-input{
+            font-size: $fontDescriptionSize;
+            color: $blackColor;
+            width: 100px;
+            padding: 5px;
+            border-radius: 5px;
+            &:focus{
+                outline: none;
+            }
+        }
+      }
     }
   }
 }
 
 // components
 @import "./components/quadraticequation";
+@import "./components/vectors";
 @import "./components/footer";
 
 // sections

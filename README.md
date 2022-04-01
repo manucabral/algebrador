@@ -2,7 +2,7 @@
 Simple calculador de formulas matemáticas y algebraicas.
 
 # Próximas implementaciones
-- [ ] Suma y resta de vectores
+- [X] Suma y resta de vectores
 - [ ] Vector por dos puntos
 - [ ] Modulo o norma de un vector
 - [ ] Distancia entre dos puntos
